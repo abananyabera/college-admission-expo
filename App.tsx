@@ -9,12 +9,18 @@ export default function App() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'skyblue',
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 15,
+  },
+
+  card: {
+    flex: 0.3,
+    backgroundColor: "beige",
+    borderWidth: 5,
   },
 });

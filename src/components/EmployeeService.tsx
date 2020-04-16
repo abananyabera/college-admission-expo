@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text } from 'react-native'
+import { StyleSheet, Text, ScrollView, SafeAreaView } from 'react-native'
 
 class EmployeeService extends Component {
    state = {
@@ -22,9 +22,9 @@ class EmployeeService extends Component {
    }
    render() {
       return (
-         <View>
+         <ScrollView>
             { this.state.data.map((item) => (
-         <View> 
+         <SafeAreaView style={style.card}> 
             <Text>
             Employee Name : {item.employee_name}
             </Text>
@@ -36,10 +36,17 @@ class EmployeeService extends Component {
             </Text>
             <Text>
             </Text>
-         </View>
+         </SafeAreaView>
           ))}
-         </View>
+         </ScrollView>
       )
    }
 }
+const style= StyleSheet.create({
+   card:{
+   flex: 0.3,
+   backgroundColor: "beige",
+   borderWidth: 5,
+   }
+});
 export default EmployeeService
